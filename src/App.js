@@ -9,12 +9,13 @@ import Logement from "./pages/logement/logement"
 function App() {
   return (
     <Router>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/About" element={<About />}/>
-      <Route path="/logements/:logement" element={<Logement/>}/>
-      <Route path="/Errors" element={<Errors />}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/About" element={<About />}/>
+        <Route path="/logements/:logement" element={<Logement/>}/>
+        <Route path="/Errors" element={<Errors />}/>
+      </Routes>
+   
   </Router>
   );
 }
