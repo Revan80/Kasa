@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home"
 import About from "./pages/About/About"
 import Errors from "./pages/Errors/Erros"
 import Logement from "./pages/logement/logement"
+import Footer from "./components/Footer/Footer"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/logements/:logement" element={<Logement/>}/>
         <Route path="/Errors" element={<Errors />}/>
       </Routes>
+      <Footer/>
    
   </Router>
   );
