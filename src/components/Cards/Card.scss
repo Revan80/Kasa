@@ -1,0 +1,47 @@
+.card_logement{
+    position: relative;
+    display: flex;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    max-width: 340px;
+
+    & img{
+        display: flex;
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .card_label{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        background: rgb(0,0,0);
+        background: rgba(0, 0, 0, 0.4); 
+        color: #f1f1f1;
+        width: 94%;
+        height: 20%;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    gap: 60px;
+    padding: 56px 0;
+    max-width: 1240px;
+    background-color: #F7F7F7;
+    border-radius: 25px;
+    margin-top: 43px;
+    flex-wrap: wrap;
+    margin-left:11%;
+}
+
+.link_card_logement{
+    text-decoration: none;
+}
