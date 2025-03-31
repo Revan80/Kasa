@@ -5,11 +5,13 @@ import About from "./pages/About/About"
 import Errors from "./pages/Errors/Erros"
 import Logement from "./pages/logement/logement"
 import Footer from "./components/Footer/Footer"
+import Header from "./components/Header/Header"
 
 
 function App() {
   return (
     <Router>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/About" element={<About />}/>
@@ -17,7 +19,6 @@ function App() {
         <Route path="/Errors" element={<Errors />}/>
       </Routes>
       <Footer/>
-   
   </Router>
   );
 }
