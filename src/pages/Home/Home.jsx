@@ -11,6 +11,7 @@ export default function Home() {
 		<div>
 			<Banner 
 			text = "Chez vous, partout et ailleurs"
+			image={"/images/imgHome.png"}
 			/>
 			<div className="cards-container">
 				{data.map((logement) => (

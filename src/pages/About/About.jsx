@@ -20,12 +20,11 @@ const aboutData = [
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum, urna at aliquet ultricies, tortor diam scelerisque massa, nec dignissim nulla metus non sem."
     }
 ];
-
 export default function About(){
     return(
         <div>
             <Banner text=""
-            image={"/images/imgHome.png"}
+            image={"/images/imgBannerAbout.png"}
             />
             {aboutData.map((item, index) => (
                 <Collapse 
@@ -37,3 +36,5 @@ export default function About(){
         </div>
     )
 }
+
+
