@@ -6,6 +6,7 @@
     border-radius: 10px;
     max-width: 340px;
 
+
     & img{
         display: flex;
         width: 100%;
@@ -18,11 +19,11 @@
         align-items: center;
         position: absolute;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.4); 
+        background: linear-gradient(0deg,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0)); 
         color: #f1f1f1;
         font-size: 18px;
         font-weight: 500;
-        width: 100%;
+        width:calc(100% - 20px);
         height: 20%;
         padding: 10px;
         border-radius: 0 0 10px 10px;
@@ -39,7 +40,7 @@
     max-width: 1240px;
     background-color: #F7F7F7;
     border-radius: 25px;
-    margin: 43px 0;
+    margin: 43px auto;
     flex-wrap: wrap;
 }
 

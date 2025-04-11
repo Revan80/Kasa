@@ -9,7 +9,9 @@ export default function Home() {
 
 	return (
 		<div>
-			<Banner />
+			<Banner 
+			text = "Chez vous, partout et ailleurs"
+			/>
 			<div className="cards-container">
 				{data.map((logement) => (
 					<div key={logement.id} className="card_logement">
