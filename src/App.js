@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home/Home"
 import About from "./pages/About/About"
-import Errors from "./pages/Errors/Erros"
+import Errors from "./pages/Errors/Errors"
 import Logement from "./pages/logement/logement"
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
@@ -13,10 +13,10 @@ function App() {
     <Router>
       <Header/>
       <Routes>
+        <Route path="*" element={<Errors />}/>
         <Route path="/" element={<Home />}/>
         <Route path="/About" element={<About />}/>
         <Route path="/logements/:logement" element={<Logement/>}/>
-        <Route path="/Errors" element={<Errors />}/>
       </Routes>
       <Footer/>
   </Router>

@@ -4,11 +4,18 @@ import Chevron from '../../assets/images/arrow_back_ios-24px 3.svg'
 
 export default function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen)
+
   return (
-    <div className='collapse'>
-        <h2 className="collapse_head" onClick={() => setIsOpen(!isOpen)}>{title} <img src={Chevron} alt="chevron"></img></h2>
-         <p className='collapse_body'>{content}</p>
+    <div className='collapseContainer'>
+      <div className='collapse-about'>
+        <div className="collapse-about__visible" onClick={() => setIsOpen(!isOpen)}>
+          <h2>{title}</h2>
+          <img src={Chevron} alt="chevron" style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0)' }}/>
+        </div>
+        <div className={`collapse-about__toggle ${isOpen ? 'animated' : ''}`}>
+          <p>{content}</p>
+        </div>
+      </div>
     </div>
   )
 }
