@@ -2,11 +2,19 @@ import React, { useState, useEffect } from "react";
 import Banner from "../../components/Banner/Banner"
 import '../../components/Cards/Card.scss'
 import Card from "../../components/Cards/Card"
-import logements from '../../data/logements.json';
 
 export default function Home() {
-	const [data, setData] = useState(logements);
+	const [dataAll, setDataAll] = useState([]);
+	useEffect(() => {
+        fetch("/data/logements.json")
+        .then(reponse => reponse.json())
+        .then(data => {
+            setDataAll(data);
+            }
+        )
 
+         },[]
+    )
 	return (
 		<div>
 			<Banner 
@@ -14,7 +22,7 @@ export default function Home() {
 			image={"/images/imgHome.png"}
 			/>
 			<div className="cards-container">
-				{data.map((logement) => (
+				{dataAll.map((logement) => (
 					<div key={logement.id} className="card_logement">
 						<Card
 							id={logement.id}
