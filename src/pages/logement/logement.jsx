@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Caroussel from "../../components/Caroussel/caroussel";
+import Collapse from "../../components/Collapse/Collapse";
+import './logement.scss'
 
 
 export default function Logement(){
@@ -26,23 +28,36 @@ export default function Logement(){
         
     }, [logementId])
 
-        
 
-    function renderContent() {
-        if (isLoading) {
-            return <p>Chargement en cours...</p>;
-        }
-        
-        if (logement) {
-            return <Caroussel pictures={logement.pictures}></Caroussel>;
-        }
-        
-        return <p>Le logement demandé n'existe pas.</p>;
-    }
+
     
     return (
         <div className="logement">
-            {renderContent()}
+            {isLoading && <p>Chargement en cours...</p>}
+            {
+                logement && 
+            <div>
+                <Caroussel pictures={logement.pictures}></Caroussel>
+                <div className="test">
+                    <Collapse
+                    title="Description"
+                    content={logement.description}
+                    />
+                    <Collapse
+                    title="Equipements"
+                    content={
+                        <ul className="equipment-list">
+                            {logement.equipments.map((equipment, index) => (
+                                <li key={index}>{equipment}</li>
+                            ))}
+                        </ul>
+                    }
+                    />
+            </div>
+                 </div>
+            }
+            
+            {!isLoading && !logement && <p>Le logement demandé n'existe pas.</p>}
         </div>
     )   
 }
