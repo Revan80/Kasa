@@ -6,4 +6,31 @@
 
 .equipment-list li {
     margin-bottom: 5px;
+}
+
+.logement {
+    .info-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .tags {
+        ul {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin-left:10%;
+            
+            li {
+                background-color: #FF6060;
+                color: white;
+                padding: 5px 15px;
+                border-radius: 10px;
+                font-size: 14px;
+            }
+        }
+    }
 } 

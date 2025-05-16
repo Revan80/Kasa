@@ -3,6 +3,8 @@ import { useParams } from "react-router";
 import Caroussel from "../../components/Caroussel/caroussel";
 import Collapse from "../../components/Collapse/Collapse";
 import './logement.scss'
+import Rating from "../../components/Rating/Rating"
+import { Navigate } from "react-router-dom";
 
 
 export default function Logement(){
@@ -19,6 +21,7 @@ export default function Logement(){
             const logementData = data.find(element => element.id === logementId)
             setLogement(logementData);
             setIsLoading(false);
+
             }
         )
         .catch(error => {
@@ -29,35 +32,48 @@ export default function Logement(){
     }, [logementId])
 
 
-
-    
     return (
         <div className="logement">
+
             {isLoading && <p>Chargement en cours...</p>}
             {
                 logement && 
             <div>
                 <Caroussel pictures={logement.pictures}></Caroussel>
+
+                <Rating rating={logement.rating}/>
+
+
+                <div className="tags">
+                <ul>
+                    {logement.tags.map((tag,index) => {
+                        return <li key={index}>{tag}</li>
+                    })}
+                </ul>
+                </div>
+                    
                 <div className="test">
                     <Collapse
-                    title="Description"
-                    content={logement.description}
-                    />
+                     title="Description"
+                    >
+                     {logement.description}
+                    </Collapse>
+
                     <Collapse
                     title="Equipements"
-                    content={
+                    >
                         <ul className="equipment-list">
                             {logement.equipments.map((equipment, index) => (
                                 <li key={index}>{equipment}</li>
                             ))}
                         </ul>
-                    }
-                    />
+                    </Collapse>
+                </div>
             </div>
-                 </div>
             }
             
-            {!isLoading && !logement && <p>Le logement demandé n'existe pas.</p>}
+            {!isLoading && !logement && <Navigate to="/Errors" replace={true} />}
+            
         </div>
     )   
 }

@@ -30,8 +30,9 @@ export default function About(){
                 <Collapse 
                     key={index}
                     title={item.title}
-                    content={item.content}
-                />
+                >
+                    {item.content}
+                  </Collapse>
             ))}
         </div>
     )
