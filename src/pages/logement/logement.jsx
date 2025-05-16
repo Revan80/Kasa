@@ -41,33 +41,54 @@ export default function Logement(){
             <div>
                 <Caroussel pictures={logement.pictures}></Caroussel>
 
-                <Rating rating={logement.rating}/>
+                <div className="logement-header">
+                    <div className="logement-header-left">
+                        <div className="logement-info">
+                            <h1 className="logement-title">{logement.title}</h1>
+                            <p className="logement-location">{logement.location}</p>
+                        </div>
+                        <div className="tags">
+                            <ul>
+                                {logement.tags.map((tag,index) => {
+                                    return <li key={index}>{tag}</li>
+                                })}
+                            </ul>
+                        </div>
+                    </div>
 
-
-                <div className="tags">
-                <ul>
-                    {logement.tags.map((tag,index) => {
-                        return <li key={index}>{tag}</li>
-                    })}
-                </ul>
+                    <div className="logement-header-right">
+                        <div className="host-profile">
+                            <div className="host-name">
+                                {logement.host.name}
+                            </div>
+                            <div className="host-picture">
+                                <img src={logement.host.picture} alt={`Photo de ${logement.host.name}`} />
+                            </div>
+                        </div>
+                        <Rating rating={logement.rating}/>
+                    </div>
                 </div>
-                    
-                <div className="test">
-                    <Collapse
-                     title="Description"
-                    >
-                     {logement.description}
-                    </Collapse>
 
-                    <Collapse
-                    title="Equipements"
-                    >
-                        <ul className="equipment-list">
-                            {logement.equipments.map((equipment, index) => (
-                                <li key={index}>{equipment}</li>
-                            ))}
-                        </ul>
-                    </Collapse>
+                <div className="logement-details">
+                    <div className="logement-detail-item">
+                        <Collapse 
+                            title="Description"
+                        >
+                            <p>{logement.description}</p>
+                        </Collapse>
+                    </div>
+
+                    <div className="logement-detail-item">
+                        <Collapse
+                            title="Equipements"
+                        >
+                            <ul className="equipment-list">
+                                {logement.equipments.map((equipment, index) => (
+                                    <li key={index}>{equipment}</li>
+                                ))}
+                            </ul>
+                        </Collapse>
+                    </div>
                 </div>
             </div>
             }

@@ -2,34 +2,111 @@
     list-style: none;
     padding: 0;
     margin: 0;
-}
 
-.equipment-list li {
-    margin-bottom: 5px;
+    li {
+        margin-bottom: 10px;
+        color: #FF6060;
+    }
 }
 
 .logement {
-    .info-section {
+    padding: 0 100px;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    .logement-header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin: 20px;
+        margin: 30px 0;
+
+        &-left {
+            .logement-info {
+                margin-bottom: 20px;
+
+                .logement-title {
+                    font-size: 36px;
+                    font-weight: 500;
+                    color: #FF6060;
+                    margin-bottom: 10px;
+                }
+
+                .logement-location {
+                    font-size: 18px;
+                    color: #FF6060;
+                }
+            }
+
+            .tags {
+                margin-top: 20px;
+                ul {
+                    display: flex;
+                    gap: 10px;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    
+                    li {
+                        background-color: #FF6060;
+                        color: white;
+                        padding: 5px 20px;
+                        border-radius: 10px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            min-height: 150px;
+
+            .host-profile {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                
+                .host-name {
+                    color: #FF6060;
+                    font-size: 18px;
+                    text-align: right;
+                    max-width: 100px;
+                }
+                
+                .host-picture {
+                    img {
+                        width: 64px;
+                        height: 64px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
     }
 
-    .tags {
-        ul {
-            display: flex;
-            gap: 10px;
-            list-style: none;
-            padding: 0;
-            margin-left:10%;
+    .logement-details {
+        display: flex;
+        gap: 76px;
+        margin-top: 24px;
+        width: 100%;
+
+        .logement-detail-item {
+            flex: 1;
+            width: 50%;
             
-            li {
-                background-color: #FF6060;
-                color: white;
-                padding: 5px 15px;
+            .collapseContainer {
+                max-width: 100%;
+                margin: 0;
+            }
+            
+            .collapse-content {
+                background-color: #F6F6F6;
                 border-radius: 10px;
-                font-size: 14px;
+                padding: 20px;
+                color: #FF6060;
             }
         }
     }

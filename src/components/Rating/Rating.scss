@@ -1,17 +1,20 @@
 .rating {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    margin-top: 10px;
     margin-right:10%;
 
-    .star {
+    .star--active,
+    .star--inactive {
         font-size: 24px;
-        
-        &--active {
-            color: #FF6060;
-        }
+        margin-left: 5px;
+    }
+    
+    .star--active {
+        color: #FF6060;
+    }
 
-        &--inactive {
-            color: #E3E3E3;
-        }
+    .star--inactive {
+        color: #E3E3E3;
     }
 }
