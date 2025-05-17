@@ -62,7 +62,7 @@ export default function Logement(){
                                 {logement.host.name}
                             </div>
                             <div className="host-picture">
-                                <img src={logement.host.picture} alt={`Photo de ${logement.host.name}`} />
+                                <img src={logement.host.picture} alt={`${logement.host.name}`} />
                             </div>
                         </div>
                         <Rating rating={logement.rating}/>

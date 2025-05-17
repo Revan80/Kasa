@@ -5,8 +5,10 @@
 }
 
 .collapse-about {
-    img {
-        width: 14px;
+    .chevron-icon {
+        width: 20px;
+        height: 20px;
+        color: white;
         transition: transform 0.3s ease-in-out;
     }
 

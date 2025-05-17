@@ -18,9 +18,22 @@
     &__btn {
         position: absolute;
         top: 50%;
-        background-color: red;
-        cursor:pointer;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 48px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
 
+        .arrow-icon {
+            color: white;
+            font-size: 40px;
+            
+        }
 
         &--prev {
             left: 25px;
@@ -30,8 +43,8 @@
             right: 25px;
         }
 
-        &--hidden{
-            display:none;
+        &--hidden {
+            display: none;
         }
     }
 
@@ -39,6 +52,7 @@
         position: absolute;
         bottom: 25px;
         left: 50%;
+        transform: translateX(-50%);
         color: white;
         font-size: 18px;
         font-weight: 500;
