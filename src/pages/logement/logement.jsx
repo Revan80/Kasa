@@ -70,7 +70,7 @@ export default function Logement(){
                 </div>
 
                 <div className="logement-details">
-                    <div className="logement-detail-item">
+                    <div className="logement-details-item">
                         <Collapse 
                             title="Description"
                         >
@@ -78,7 +78,7 @@ export default function Logement(){
                         </Collapse>
                     </div>
 
-                    <div className="logement-detail-item">
+                    <div className="logement-details-item">
                         <Collapse
                             title="Equipements"
                         >

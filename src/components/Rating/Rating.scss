@@ -18,3 +18,15 @@
         color: #E3E3E3;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .rating {
+        margin-right: 0;
+        
+        .star--active,
+        .star--inactive {
+            font-size: 15px;
+            margin-left: 2px;
+        }
+    }
+}

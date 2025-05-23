@@ -59,3 +59,36 @@
         text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
     }
 }
+
+@media screen and (max-width: 480px) {
+    .caroussel {
+        height: 255px;
+        border-radius: 10px;
+        margin: 0 auto 15px;
+        
+        &__image {
+            border-radius: 10px;
+        }
+        
+        &__btn {
+            width: 24px;
+            height: 24px;
+            
+            .arrow-icon {
+                font-size: 20px;
+            }
+            
+            &--prev {
+                left: 10px;
+            }
+            
+            &--next {
+                right: 10px;
+            }
+        }
+        
+        &__counter {
+            font-size: 14px;
+        }
+    }
+}

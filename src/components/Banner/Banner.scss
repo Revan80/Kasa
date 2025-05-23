@@ -45,9 +45,38 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+    .banner-container {
+        height: 111px;
+        border-radius: 10px;
+        margin: 15px auto;
+        width: 90%;
+        
+        &::before {
+            border-radius: 10px;
+        }
+    }
+    
+    .banner-text {
+        font-size: 20px;
+        padding: 0 16px;
+        text-align: left;
+        line-height: 24px;
+        max-width: 65%;
+    }
+}
+
 .banner-text-container{
     display: flex;
     width: auto;
     height: 68px;
+}
+
+@media screen and (max-width: 480px) {
+    .banner-text-container {
+        height: auto;
+        width: 100%;
+        justify-content: flex-start;
+    }
 }
 

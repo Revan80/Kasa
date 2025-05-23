@@ -16,3 +16,19 @@
             width:122px;
         }
 }
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding-top: 20px;
+        margin-top: 5%;
+        
+        &__text {
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        &__logo {
+            width: 100px;
+        }
+    }
+}
