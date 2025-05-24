@@ -31,7 +31,7 @@ export default function About(){
                     key={index}
                     title={item.title}
                 >
-                    {item.content}
+                    <p>{item.content}</p>
                   </Collapse>
             ))}
         </div>

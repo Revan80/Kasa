@@ -17,7 +17,7 @@ export default function Collapse({ title,children}) {
           />
         </div>
         <div className={`collapse-about__toggle ${isOpen ? 'animated' : ''}`}>
-          <p>{children}</p>
+          {children}
         </div>
       </div>
     </div>
